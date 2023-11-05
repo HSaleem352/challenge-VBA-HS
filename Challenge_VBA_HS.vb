@@ -15,7 +15,7 @@ Sub stocks():
                 ws.Range("M1").Value = "Total Stock Volume"
                 
             ' Set the total number of rows
-            Dim rowNum As Integer
+            Dim rowNum As Long
             rowNum = ws.Range("A1").End(xlDown).Row
             
             ' Set an initial variable for holding the Ticker
@@ -40,7 +40,7 @@ Sub stocks():
             percentChange = 0
         
             ' Keep track of rows for each new ticker in the summary table
-            Dim summaryTableRow As Integer
+            Dim summaryTableRow As Long
             summaryTableRow = 2
             
             ' Loop through all stocks
@@ -150,7 +150,7 @@ Sub stocks():
             ws.Range("R1").Value = "Value"
           
           ' Set the row count for the new table
-            Dim rowNumTickers As Integer
+            Dim rowNumTickers As Long
             rowNumTickers = ws.Range("J1").End(xlDown).Row
             
           ' Initialize and set the first values in the table
@@ -215,4 +215,5 @@ Sub stocks():
     Next ws
 
 End Sub
+
 
